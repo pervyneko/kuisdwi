@@ -1,5 +1,12 @@
-<form method="POST" action="{{url('/soal4/proses')}}">
+@extends('base')
+
+@section('base')
+<form action="{{ route('soal4.proses') }}" method="POST">
 	@csrf
-	Angka : <input type="number" name="angka"> <br>
-	<input type="submit" value="submit">
+	<div class="mb-3">
+		<label class="form-label">Angka</label>
+		<input type="number" class="form-control" name="angka">
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
 </form>
+@endsection

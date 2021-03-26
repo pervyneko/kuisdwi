@@ -6,15 +6,18 @@ use Illuminate\Http\Request;
 
 class Soal4 extends Controller
 {
-	    function index (){
+	function index()
+	{
 		return view('soal4');
 	}
-	function proses (Request $request){
-		$angka = $request -> input('angka');
 
-		$data = array(
-		'angka' => $angka
-		);
-		return view('hasil4', $data);
-	}	
+	function proses(Request $request)
+	{
+		return redirect()->route('soal4.result', $request->angka);
+	}
+
+	public function result($angka)
+	{
+		return view('hasil4', compact('angka'));
+	}
 }
