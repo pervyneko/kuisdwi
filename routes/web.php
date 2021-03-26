@@ -35,4 +35,5 @@ Route::post('/soal4/proses', [Soal4::class, 'proses'])->name('soal4.proses');
 Route::get('/soal4/{angka}', [Soal4::class, 'result'])->name('soal4.result');
 
 Route::get('/soal5', [Soal5::class, 'index']);
-Route::post('/soal5/proses', [Soal5::class, 'proses']);
+Route::post('/soal5/proses', [Soal5::class, 'proses'])->name('soal5.proses');;
+Route::get('/soal5/{angka}', [Soal5::class, 'result'])->name('soal5.result');
